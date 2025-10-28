@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Register Interactive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container" id="container">
+    <!-- LOGIN FORM -->
+    <div class="form-container login">
+      <h2>Selamat Datang Kembali</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Masuk</button>
+      <p style="margin-top:15px;">Belum punya akun? 
+        <a href="#" id="toRegister" style="color:#3b82f6;">Daftar</a>
+      </p>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div class="form-container register">
+      <h2>Buat Akun Baru</h2>
+      <input type="text" placeholder="Nama Lengkap" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Daftar</button>
+      <p style="margin-top:15px;">Sudah punya akun? 
+        <a href="#" id="toLogin" style="color:#3b82f6;">Masuk</a>
+      </p>
+    </div>
+
+    <!-- INFO PANEL -->
+    <div class="info-container">
+      <h2>Halo, Sahabat!</h2>
+      <p>Masuk atau daftar sekarang untuk melanjutkan perjalananmu di dunia biru modern kami.</p>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+    const toRegister = document.getElementById('toRegister');
+    const toLogin = document.getElementById('toLogin');
+
+    toRegister.addEventListener('click', (e) => {
+      e.preventDefault();
+      container.classList.add('active');
+    });
+
+    toLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      container.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
